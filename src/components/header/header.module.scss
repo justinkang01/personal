@@ -1,0 +1,31 @@
+@import '../common/main.scss';
+
+.headerContainer {
+    height: rem(50px);
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: $font-xLarge;
+    z-index: 5;
+}
+
+.light {
+    background-color: $light-beige;
+    color: $dark-blue;
+}
+
+.dark {    
+    background-color: $dark-blue;
+    color: $light-beige;
+}
+
+.items {
+    display:flex;
+    margin-left: auto;
+    flex-direction: row;
+    align-items: center;
+}

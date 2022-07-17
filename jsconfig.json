@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+        "@root/constants": ["./constants"],
+        "@test/*": ["../config/jest/*"]
+      }
+    },
+    "include": ["./src"]
+  }
+  

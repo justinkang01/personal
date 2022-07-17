@@ -1,0 +1,33 @@
+// colors
+$mint-green : #C2DED1; 
+$light-beige: #ECE5C7;
+$beige: #CDC2AE;
+$dark-blue: #354259;
+$white: #ffffff;
+$black: #000000;
+
+// typography
+$root-font-size: 14px;
+
+@function rem($pixels, $context: $root-font-size) {
+    @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
+    }
+  
+    @if (unitless($context)) {
+      $context: $context * 1px;
+    }
+  
+    @return $pixels / $context * 1rem;
+  }
+$regular-font: 'Roboto', 'Open Sans', Arial, sans-serif;
+
+$font-xSmall: rem(8px);
+$font-small: rem(10px);
+$font-medium: rem(14px);
+$font-large: rem(18px);
+$font-xLarge: rem(30px);
+$font-xxLarge: rem(40px);
+
+// header height
+$header-height: 50px;
