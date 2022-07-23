@@ -1,16 +1,27 @@
 @import './components/common/main.scss';
 
 .app {
-  height: 100vh;
+    height: 100vh;
 }
 .sections {
-  width: 100%;
-  height: calc(100vh - $header-height);
-  scroll-snap-type: y mandatory;
-  position: relative;
-  top: $header-height;
-  > *{
+    width: 100%;
     height: calc(100vh - $header-height);
-    scroll-snap-align: start;
-  }
+    scroll-snap-type: y mandatory;
+    position: relative;
+    top: $header-height;
+    > * {
+        height: calc(100vh - $header-height);
+        scroll-snap-align: start;
+    }
+}
+
+.mobile {
+    height: 100vh;
+    background-color: $dark-blue;
+    color: $beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: $font-large;
 }

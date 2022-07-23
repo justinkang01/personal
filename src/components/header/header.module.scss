@@ -14,17 +14,15 @@
 }
 
 .light {
-    background-color: $light-beige;
     color: $dark-blue;
 }
 
-.dark {    
-    background-color: $dark-blue;
+.dark {
     color: $light-beige;
 }
 
 .items {
-    display:flex;
+    display: flex;
     margin-left: auto;
     flex-direction: row;
     align-items: center;

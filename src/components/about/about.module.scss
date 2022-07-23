@@ -11,7 +11,7 @@
     align-items: center;
 }
 .bubbleContainer {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex: 1 1 50%;
@@ -19,11 +19,11 @@
 .bubble {
     overflow: hidden;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
     border-radius: 50%;
     border: 1px solid black;
+    display: flex;
     img {
-        border-radius: 50%;
         width: 100%;
     }
 }
