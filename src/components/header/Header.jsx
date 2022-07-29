@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../common/Button';
+import '../common/main.scss';
 import styles from './header.module.scss';
 
 const items = [
@@ -24,11 +25,13 @@ const Header = () => {
     };
 
     return (
-        <div className={`${styles['headerContainer']} ${styles[changeTheme(theme)]}`}>
-            <div>home</div>
-            <div className={styles.items}>
-                {headerButtons}
-                <Button text={theme} onClick={() => setTheme(changeTheme(theme))} />
+        <div className={`${styles['headerContainer']} ${changeTheme(theme)}`}>
+            <div className={styles['headerWrapper']}>
+                <div>home</div>
+                <div className={styles.items}>
+                    {headerButtons}
+                    <Button text={theme} onClick={() => setTheme(changeTheme(theme))} />
+                </div>
             </div>
         </div>
     );

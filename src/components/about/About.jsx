@@ -27,7 +27,7 @@ const Bubble = ({ size, data, index }) => {
 
     return (
         <div className={styles['bubbleContainer']}>
-            <div style={style} className={classNameBuilder(styles.bubble, { evenRow: index % 2 })}>
+            <div style={style} className={classNameBuilder(styles.bubble)}>
                 <img alt={alt} src={imgSrc} />
             </div>
             <div style={textStyle} className={styles.bubbleText}>

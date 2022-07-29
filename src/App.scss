@@ -7,8 +7,14 @@
   width: 100%;
   height: calc(100vh - $header-height);
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   position: relative;
   top: $header-height;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
   > *{
     height: calc(100vh - $header-height);
     scroll-snap-align: start;
