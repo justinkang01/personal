@@ -1,22 +1,22 @@
 [
-    {
-        "text": "Hi! My name is Justin Kang and I'm a University student studying computer science at Cornell. This is my personal website, built on React and hosted on Heroku!",
-        "imgSrc": "tempSrc",
-        "alt": "a picture of me, Justin"
-    },
-    {
-        "text": "I've always had an interest in computers, breaking them apart to find out what happens on the inside, and didn't gain an interest into software until my first year at college.",
-        "imgSrc": "src",
-        "alt": "a picture of a broken down computer I used to further my pursuit of knowledge"
-    },
-    {
-        "text": "Now, after three full years of studying computer science, I seek to use my abilities to create new products, innovate on past tools, and help out both the local and global community that surrounds me",
-        "imgSrc": "src",
-        "alt": "a picture of me volunteering"
-    },
-    {
-        "text": "Some hobbies I have are: playing guitar, making mechanical keyboards, and trying my best to make food that I enjoy eating!",
-        "imgSrc": "src",
-        "alt": "a picture of my hobbies"
-    }
+  {
+    "text": "Hi! My name is Justin Kang and I'm a University student studying computer science at Cornell. This is my personal website, built using React!",
+    "imgSrc": "profile.jpg",
+    "alt": "a picture of me, Justin"
+  },
+  {
+    "text": "I've always had an interest in computers, breaking them apart to find out what happens on the inside, and didn't gain an interest into software until my first year at college.",
+    "imgSrc": "jumping_cat.png",
+    "alt": "a picture of a broken down computer I used to further my pursuit of knowledge"
+  },
+  {
+    "text": "Now, after three full years of studying computer science, I seek to use my abilities to create new products, innovate on past tools, and help out both the local and global community that surrounds me",
+    "imgSrc": "jumping_cat.png",
+    "alt": "a picture of me volunteering"
+  },
+  {
+    "text": "Some hobbies I have are: playing guitar, making mechanical keyboards, and trying my best to make food that I enjoy eating!",
+    "imgSrc": "jumping_cat.png",
+    "alt": "a picture of my hobbies"
+  }
 ]

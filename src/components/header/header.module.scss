@@ -9,14 +9,16 @@
     z-index: 5;
 }
 
-.headerWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.light {
+    color: $dark-blue;
+}
+
+.dark {
+    color: $light-beige;
 }
 
 .items {
-    display:flex;
+    display: flex;
     margin-left: auto;
     flex-direction: row;
     align-items: center;
