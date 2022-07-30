@@ -31,3 +31,13 @@ $font-xxLarge: rem(40px);
 
 // header height
 $header-height: 50px;
+
+.light {
+  background-color: $light-beige;
+  color: $dark-blue;
+}
+
+.dark {    
+  background-color: $dark-blue;
+  color: $light-beige;
+}

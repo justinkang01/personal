@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../common/Button';
+import '../common/main.scss';
 import styles from './header.module.scss';
 
 const items = [
