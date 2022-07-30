@@ -3,8 +3,8 @@ import Button from '../common/Button';
 import styles from './header.module.scss';
 
 const items = [
-    { text: 'about', style: 'large' },
-    { text: 'projects', style: 'large' },
+    { text: 'about', style: 'small' },
+    { text: 'projects', style: 'small' },
 ];
 
 const headerButtons = items.map((item, index) => {
@@ -25,11 +25,8 @@ const Header = () => {
 
     return (
         <div className={`${styles['headerContainer']} ${styles[changeTheme(theme)]}`}>
-            <div>home</div>
-            <div className={styles.items}>
-                {headerButtons}
-                <Button text={theme} onClick={() => setTheme(changeTheme(theme))} />
-            </div>
+            {headerButtons}
+            Change Theme: <Button text={theme} onClick={() => setTheme(changeTheme(theme))} />
         </div>
     );
 };

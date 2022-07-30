@@ -6,12 +6,13 @@
 .sections {
     width: 100%;
     height: calc(100vh - $header-height);
-    scroll-snap-type: y mandatory;
+    // scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     position: relative;
     top: $header-height;
     > * {
         height: calc(100vh - $header-height);
-        scroll-snap-align: start;
+        // scroll-snap-align: start;
     }
 }
 

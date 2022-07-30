@@ -1,5 +1,6 @@
 @import '../common/main.scss';
 
 .projectContainer {
-    background-color: aqua;
+    background: (linear-gradient(transparent, $dark-blue));
+    background-color: $light-beige;
 }

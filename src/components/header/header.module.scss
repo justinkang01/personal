@@ -1,16 +1,17 @@
 @import '../common/main.scss';
 
 .headerContainer {
-    height: rem(50px);
+    height: $header-height;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     position: fixed;
     width: 100%;
     top: 0;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
-    font-size: $font-xLarge;
-    z-index: 5;
+    font-size: $font-medium;
+    // z-index: 5;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .light {
@@ -19,11 +20,4 @@
 
 .dark {
     color: $light-beige;
-}
-
-.items {
-    display: flex;
-    margin-left: auto;
-    flex-direction: row;
-    align-items: center;
 }
