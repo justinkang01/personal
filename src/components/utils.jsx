@@ -51,4 +51,10 @@ export const useImage = fileName => {
     };
 };
 
-// export default { getWindowDimensions, useImage };
+export const changeTheme = currTheme => {
+    const changeHelper = {
+        dark: 'light',
+        light: 'dark',
+    };
+    return changeHelper[currTheme];
+};

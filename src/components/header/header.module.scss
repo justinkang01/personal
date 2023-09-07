@@ -3,21 +3,16 @@
 .headerContainer {
     height: $header-height;
     display: flex;
-    flex-flow: row wrap;
     position: fixed;
     width: 100%;
     top: 0;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     font-size: $font-medium;
-    // z-index: 5;
-    background-color: rgba(0, 0, 0, 0);
 }
-
-.light {
-    color: $dark-blue;
+h2 {
+    margin-left: rem(20px);
 }
-
-.dark {
-    color: $light-beige;
+.theme {
+    margin-right: rem(20px);
 }

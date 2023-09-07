@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import About from 'components/about/About';
-import Projects from 'components/projects/Projects';
 import { useWindowDimensions } from 'components/utils';
+import { ThemeContext } from './ThemeContext';
 import Header from './components/header/Header';
-import './App.scss';
+import styles from './App.module.scss';
 
 function App() {
     const [isMobile, setMobile] = useState(false);
     const windowSize = useWindowDimensions();
-
+    const { theme } = useContext(ThemeContext);
     useEffect(() => {
         if (windowSize.width <= 800) {
             setMobile(true);
@@ -22,11 +22,10 @@ function App() {
             <div>Sorry! Mobile development is in progress. In the meantime, use a desktop to view this website.</div>
         </div>
     ) : (
-        <div className="app">
+        <div className={`${styles.app} ${theme}`}>
             <Header />
-            <div className="sections">
+            <div className={styles.sections}>
                 <About />
-                <Projects />
             </div>
         </div>
     );

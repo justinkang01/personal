@@ -1,0 +1,26 @@
+.bubbleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1 1 50%;
+}
+.bubble {
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    img {
+        width: 100%;
+    }
+}
+
+.bubbleText {
+    // background-color: $beige;
+    align-items: center;
+    margin: auto;
+    padding: 1rem 1rem;
+    overflow: visible;
+    border-radius: rem(20px);
+}

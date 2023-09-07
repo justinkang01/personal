@@ -1,74 +1,38 @@
-import React, { useCallback, useEffect, useLayoutEffect, useState } from 'react';
-import classnames from 'classnames/bind';
-import { getWindowDimensions, useImage, useWindowDimensions } from 'components/utils';
-// import logo from 'logo.svg';
-import data from './data';
+import React from 'react';
 import styles from './about.module.scss';
-
-const classNameBuilder = classnames.bind(styles);
-
-/**
- * Bubble is a component that will generate a content "bubble"
- *
- * @param {number} size - The size of the bubble to be generated
- * @param {object} data - The image and text data to be displayed
- * @param {number} index - The index of the bubble, to be used for positioning
- */
-const Bubble = ({ size, data, index }) => {
-    const { text, imgSrc, alt } = data;
-    const style = {
-        width: `${size}px`,
-        height: `${size}px`,
-    };
-    const textStyle = {
-        height: `${size}px`,
-        width: '50%',
-    };
-    const { loading, error, image } = useImage(imgSrc);
-
-    useEffect(() => {
-        if (error) {
-            return <div>{error}</div>;
-        }
-    }, [error]);
-
-    return (
-        <div className={styles['bubbleContainer']}>
-            <div style={style} className={classNameBuilder(styles.bubble, { evenRow: index % 2 })}>
-                {loading ? <div className={styles.loader}>loading image...</div> : <img alt={alt} src={image} />}
-            </div>
-            <div style={textStyle} className={styles.bubbleText}>
-                {text}
-            </div>
-        </div>
-    );
-};
 
 /**
  * @returns The About page
  */
 const About = () => {
-    const windowSize = useWindowDimensions();
-    const size = Math.min(windowSize.width, windowSize.height) / data.length;
-    const [bubbleSize, setBubbleSize] = useState(size);
-
-    // theoretically, whenever the windowSize changes, this should change the size of the bubbles to match
-    useLayoutEffect(() => {
-        const bSize = Math.min(windowSize.width, windowSize.height) / data.length;
-        setBubbleSize(bSize);
-    }, [windowSize]);
-
-    /**
-     * @todo currently, statically render in bubbles based on data.
-     * in future, want to update the look of the site to render in bubbles
-     * and onhover and onclick changes the about section.
-     *
-     */
     return (
         <div className={styles.aboutContainer}>
-            {data.map((data, index) => {
-                return <Bubble size={bubbleSize} data={data} key={index} />;
-            })}
+            <h1>hi. i'm justin</h1>
+            <h3 className={styles.shortIntro}>Cornell University Graduate | Software Developer</h3>
+            <div className={styles.introContainer}>
+                <p className={styles.restIntro}>
+                    Welcome to my website, where I try to implement everything that I learned from different projects,
+                    internships, and coursework. Although it's simple, it displays who I am: a coder, a student, a
+                    maximalist, and a lover of Christ.
+                </p>
+                {/* <p className={styles.restIntro}>
+                After being introduced to programming as a freshman in college, I then decided to take the plunge into
+                software engineering, and now am prepared to be a developer with a focus on frontend technologies. I've
+                exposed myself to other areas such as backend engineering and the tiniest bit of data science, but find
+                my passion to revolve around creating interactive and accessible websites.
+            </p> */}
+                <p className={styles.socials}>
+                    If any of this interests you, feel free to check out my{' '}
+                    <a href="https://www.linkedin.com/in/justin-joonha-kang/" target="_blank" rel="noreferrer noopener">
+                        LinkedIn
+                    </a>{' '}
+                    or my{' '}
+                    <a href="https://www.github.com/justinkang01/" target="_blank" rel="noreferrer noopener">
+                        GitHub
+                    </a>{' '}
+                    for more information!
+                </p>
+            </div>
         </div>
     );
 };

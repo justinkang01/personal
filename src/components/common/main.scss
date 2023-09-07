@@ -1,7 +1,7 @@
 // colors
-$mint-green : #C2DED1; 
-$light-beige: #ECE5C7;
-$beige: #CDC2AE;
+$mint-green: #c2ded1;
+$light-beige: #ece5c7;
+$beige: #cdc2ae;
 $dark-blue: #354259;
 $white: #ffffff;
 $black: #000000;
@@ -11,15 +11,15 @@ $root-font-size: 14px;
 
 @function rem($pixels, $context: $root-font-size) {
     @if (unitless($pixels)) {
-      $pixels: $pixels * 1px;
+        $pixels: $pixels * 1px;
     }
-  
+
     @if (unitless($context)) {
-      $context: $context * 1px;
+        $context: $context * 1px;
     }
-  
+
     @return $pixels / $context * 1rem;
-  }
+}
 $regular-font: 'Roboto', 'Open Sans', Arial, sans-serif;
 
 $font-xSmall: rem(8px);
@@ -33,11 +33,11 @@ $font-xxLarge: rem(40px);
 $header-height: 50px;
 
 .light {
-  background-color: $light-beige;
-  color: $dark-blue;
+    background-color: $white;
+    color: $dark-blue;
 }
 
-.dark {    
-  background-color: $dark-blue;
-  color: $light-beige;
+.dark {
+    background-color: $dark-blue;
+    color: $white;
 }

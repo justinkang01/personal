@@ -7,7 +7,9 @@ const classNameBuilder = classNames.bind(styles);
 const Button = ({ text, onClick, style }) => {
     return (
         <div className={classNameBuilder(styles.buttonContainer, styles[style])}>
-            <button onClick={onClick}>{text}</button>
+            <button onClick={onClick} className={styles[style]}>
+                {text}
+            </button>
         </div>
     );
 };

@@ -1,41 +1,52 @@
 @import '../common/main.scss';
 
 .aboutContainer {
-    background: (linear-gradient(transparent, $light-beige));
-    background-color: white;
+    // background: (linear-gradient(transparent, $light-beige));
+    // background-color: white;
     // height: calc(100vh - rem(50px));
     width: 100vw;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    text-align: center;
 }
-.bubbleContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex: 1 1 50%;
+h1 {
+    margin-top: rem(20px);
 }
-.bubble {
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 1px solid black;
+
+.shortIntro {
+    width: 35vw;
+    margin: 10px;
+}
+
+.introContainer {
+    width: 50vw;
     display: flex;
-    img {
-        width: 100%;
+    flex-direction: row;
+    align-content: center;
+}
+
+.restIntro {
+    width: 40vw;
+    margin: 5px;
+    align-self: center;
+}
+
+.socials {
+    width: 10vw;
+    align-self: center;
+    font-size: small;
+    a,
+    a:visited {
+        text-decoration: none;
+        color: $dark-blue;
+        font-weight: 800;
+        cursor: pointer;
+    }
+    a:hover {
+        text-decoration: underline;
+        transition: all 0.2s ease-in;
     }
 }
-
-.bubbleText {
-    background-color: $beige;
-    align-items: center;
-    margin: auto;
-    padding: 1rem 1rem;
-    overflow: visible;
-    border-radius: rem(20px);
-}
-
-// breakpoint needed where we change flex direction of about container to column

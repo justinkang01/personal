@@ -1,7 +1,12 @@
 @import '../common/main.scss';
 
 .buttonContainer {
-    border-radius: rem(70px);
+    border-radius: rem(40px);
+    &.xSmall {
+        height: rem(30px);
+        width: rem(40px);
+        font-size: $font-medium;
+    }
     &.small {
         height: rem(35px);
         width: rem(80px);
@@ -17,6 +22,11 @@
         width: rem(150px);
         font-size: $font-xLarge;
     }
+    &.dark,
+    &.light {
+        height: rem(25px);
+        width: rem(50px);
+    }
 }
 
 button {
@@ -26,4 +36,6 @@ button {
     text-align: center;
     font-size: inherit;
     align-items: center;
+    border: 0;
+    padding: rem(5px);
 }
