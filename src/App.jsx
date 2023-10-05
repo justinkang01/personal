@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import About from 'components/about/About';
+import Projects from 'components/projects/Projects';
+import Timeline from 'components/timeline/Timeline';
 import { useWindowDimensions } from 'components/utils';
 import { ThemeContext } from './ThemeContext';
 import Header from './components/header/Header';
@@ -26,6 +28,8 @@ function App() {
             <Header />
             <div className={styles.sections}>
                 <About />
+                <Projects />
+                <Timeline />
             </div>
         </div>
     );

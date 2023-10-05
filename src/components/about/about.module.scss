@@ -3,26 +3,28 @@
 .aboutContainer {
     // background: (linear-gradient(transparent, $light-beige));
     // background-color: white;
-    // height: calc(100vh - rem(50px));
+    height: calc(100vh - #{$header-height});
     width: 100vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
     text-align: center;
 }
 h1 {
-    margin-top: rem(20px);
+    margin-top: rem(40px);
 }
 
 .shortIntro {
-    width: 35vw;
-    margin: 10px;
+    width: 40vw;
+    margin: rem(10px);
 }
 
 .introContainer {
-    width: 50vw;
+    width: 70vw;
+    margin-bottom: rem(50px);
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -30,14 +32,15 @@ h1 {
 
 .restIntro {
     width: 40vw;
-    margin: 5px;
+    margin: rem(5px);
     align-self: center;
+    font-size: x-large;
 }
 
 .socials {
-    width: 10vw;
+    width: 15vw;
     align-self: center;
-    font-size: small;
+    font-size: large;
     a,
     a:visited {
         text-decoration: none;
@@ -49,4 +52,9 @@ h1 {
         text-decoration: underline;
         transition: all 0.2s ease-in;
     }
+}
+
+.img {
+    width: 15vw;
+    margin: rem(10px);
 }
