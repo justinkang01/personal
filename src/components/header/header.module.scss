@@ -12,7 +12,11 @@
 }
 h2 {
     margin-left: rem(20px);
+    cursor: pointer;
 }
 .theme {
     margin-right: rem(20px);
+    border: 2px black solid;
+    border-radius: 40%;
+    align-items: center;
 }

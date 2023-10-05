@@ -1,6 +1,84 @@
 @import '../common/main.scss';
 
 .projectContainer {
-    background: (linear-gradient(transparent, $dark-blue));
     background-color: $light-beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselWrapper {
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+    width: 70vw;
+}
+
+.carouselItems {
+    position: relative;
+    display: flex;
+    text-align: center;
+    width: 70vw;
+    transition: transform 0.5s ease-in;
+}
+
+.carouselItem {
+    position: absolute;
+    flex-shrink: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.active {
+    position: relative;
+    opacity: 1;
+}
+
+.carouselControl {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.buttonPrev {
+    left: 0;
+}
+
+.buttonNext {
+    right: 0;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+.paginationIndicator {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+.paginationIndicator.active {
+    background-color: rgba(255, 255, 255, 1);
 }

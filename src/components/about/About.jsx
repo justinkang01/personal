@@ -7,8 +7,10 @@ import styles from './about.module.scss';
 const About = () => {
     return (
         <div className={styles.aboutContainer}>
-            <h1>hi. i'm justin</h1>
-            <h3 className={styles.shortIntro}>Cornell University Graduate | Software Developer</h3>
+            <div>
+                <h1>hi. i'm justin!</h1>
+                <h3 className={styles.shortIntro}>Cornell University Graduate | Software Developer</h3>
+            </div>
             <div className={styles.introContainer}>
                 <p className={styles.restIntro}>
                     Welcome to my website, where I try to implement everything that I learned from different projects,
@@ -32,6 +34,7 @@ const About = () => {
                     </a>{' '}
                     for more information!
                 </p>
+                <img alt="the creator of this website: justin" className={styles.img}></img>
             </div>
         </div>
     );

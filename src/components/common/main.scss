@@ -30,7 +30,7 @@ $font-xLarge: rem(30px);
 $font-xxLarge: rem(40px);
 
 // header height
-$header-height: 50px;
+$header-height: rem(50px);
 
 .light {
     background-color: $white;
@@ -39,5 +39,8 @@ $header-height: 50px;
 
 .dark {
     background-color: $dark-blue;
+    color: $white;
+}
+.dark a {
     color: $white;
 }
