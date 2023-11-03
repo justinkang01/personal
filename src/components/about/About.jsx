@@ -1,4 +1,5 @@
 import React from 'react';
+import profile from '../../assets/profile-pic.jpg';
 import styles from './about.module.scss';
 
 /**
@@ -34,7 +35,7 @@ const About = () => {
                     </a>{' '}
                     for more information!
                 </p>
-                <img alt="the creator of this website: justin" className={styles.img}></img>
+                <img src={profile} alt="the creator of this website: justin" className={styles.img}></img>
             </div>
         </div>
     );
