@@ -3,6 +3,7 @@
 .aboutContainer {
     // background: (linear-gradient(transparent, $light-beige));
     // background-color: white;
+    background-size: 100vw;
     height: calc(100vh - #{$header-height});
     width: 100vw;
     margin: 0 auto;
@@ -56,5 +57,6 @@ h1 {
 
 .img {
     width: 15vw;
-    margin: rem(10px);
+    margin: rem(50px);
+    border-radius: 20%;
 }

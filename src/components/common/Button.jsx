@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import styles from './button.module.scss';
 
 const classNameBuilder = classNames.bind(styles);
-const Button = ({ text, onClick, style }) => {
+const Button = ({ text, onClick, cn }) => {
     return (
-        <div className={classNameBuilder(styles.buttonContainer, styles[style])}>
-            <button onClick={onClick} className={styles[style]}>
+        <div className={classNameBuilder(styles.buttonContainer, styles[cn])}>
+            <button onClick={onClick} className={styles[cn]}>
                 {text}
             </button>
         </div>

@@ -1,0 +1,12 @@
+[
+  {
+    "src": "monopoly.png",
+    "alt": "Monopoly",
+    "desc": "For this project, a focus on functional programming was emphasized. Created for a final project for one of my undergraduate courses, what started off as a text-adventure game turned into an online version of the popular board game: Monopoly. With over 3000 lines of codes and a testing coverage of over 90%, this project was the gateway to learn about high intenisty project building and collaborating with teammates."
+  },
+  {
+    "src": "website.png",
+    "alt": "Website",
+    "desc": "This website is the culmination of my wanting of learning new things. What started off as a basic HTML/CSS static page, it was tranformed into a single page application based in ReactJS. The purpose of this project is to keep myself improving on as many levels as possible and to keep my learning experience engaged."
+  }
+]

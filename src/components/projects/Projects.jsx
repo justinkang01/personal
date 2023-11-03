@@ -1,42 +1,47 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'components/common/Button';
+import { useImage } from 'components/utils';
+import monopoly from '../../monopoly.png';
+import data from './data';
 import '../common/main.scss';
 import styles from './projects.module.scss';
 
-const data = [
-    {
-        src: 'test',
-        alt: 'Monopoly',
-        desc: 'For this project, a focus on functional programming was emphasized. Created for a final project for one of my undergraduate courses, what started off as a text-adventure game turned into an online version of the popular board game: Monopoly. With over 3000 lines of codes and a testing coverage of over 90%, this project was the gateway to learn about high intenisty project building and collaborating with teammates.',
-    },
-    {
-        src: 'test2',
-        alt: 'Website',
-        desc: 'This website is the culmination of my wanting of learning new things. What started off as a basic HTML/CSS static page, it was tranformed into a single page application based in ReactJS. The purpose of this project is to keep myself improving on as many levels as possible and to keep my learning experience engaged.',
-    },
-];
+const CarouselItem = ({ data, idx, active }) => {
+    const { src, alt, desc } = data;
+
+    const { loading, error, image } = useImage(src);
+
+    useEffect(() => {
+        if (error) return <div>{error}</div>;
+    }, [error]);
+
+    return loading ? (
+        <div>loading image</div>
+    ) : (
+        <div key={idx} className={`${styles.carouselItem} ${active ? styles['active'] : ''}`}>
+            <img className={styles.img} src={`${image}`} alt={alt} />
+            <div className={styles.desc}>{desc}</div>
+        </div>
+    );
+};
+
 const Carousel = ({ data }) => {
     const [activeIdx, setIdx] = useState(0);
-    const handleNext = useCallback(() => {
+    const handleNext = () => {
         setIdx(prevId => (prevId === data.length - 1 ? 0 : (prevId + 1) % data.length));
-    }, [data.length]);
-    const handlePrev = useCallback(() => {
+    };
+    const handlePrev = () => {
         setIdx(prevId => (prevId === 0 ? data.length - 1 : prevId - 1));
-    }, [data.length]);
-
+    };
     return (
         <div className={styles.carouselWrapper}>
             <div className={styles.carouselItems}>
-                {data.map((elm, idx) => (
-                    <div key={idx} className={`${styles.carouselItem} ${idx === activeIdx ? styles['active'] : ''}`}>
-                        <img src={elm.src} alt={elm.alt} />
-                        <div>{elm.desc}</div>
-                    </div>
-                ))}
+                {data.map((elm, idx) => {
+                    return <CarouselItem data={elm} key={idx} active={idx === activeIdx} />;
+                })}
             </div>
-            <Button style="xSmall" onClick={handlePrev} text="<" />
-
             <div className={styles.pagination}>
+                <Button cn="xSmall" onClick={handlePrev} text="<" />
                 {data.map((_, idx) => (
                     <button
                         key={idx}
@@ -44,8 +49,8 @@ const Carousel = ({ data }) => {
                         onClick={() => setIdx(idx)}
                     ></button>
                 ))}
+                <Button cn="xSmall" onClick={handleNext} text=">" />
             </div>
-            <Button style="xSmall" onClick={handleNext} text=">" />
         </div>
     );
 };
@@ -53,7 +58,9 @@ const Carousel = ({ data }) => {
 const Projects = () => {
     return (
         <div className={styles.projectContainer}>
+            <h1>.projects</h1>
             <Carousel data={data} />
+            {/* <img src={monopoly} /> */}
         </div>
     );
 };
