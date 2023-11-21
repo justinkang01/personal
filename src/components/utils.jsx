@@ -58,3 +58,18 @@ export const changeTheme = currTheme => {
     };
     return changeHelper[currTheme];
 };
+
+export const useComponentWidth = (ref, idx) => {
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        setWidth(ref.current[idx].offsetWidth);
+        const getWidth = () => {
+            setWidth(ref.current[idx].offsetWidth);
+        };
+        window.addEventListener('resize', getWidth);
+        return () => window.removeEventListener('resize', getWidth);
+    }, [ref]);
+    console.log('changing window size');
+    return width;
+};
